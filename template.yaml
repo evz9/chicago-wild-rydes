@@ -62,6 +62,8 @@ Resources:
         - email
         - preferred_username
       UserPoolName: !Sub ${AWS::StackName}-UserPool
+      AutoVerifiedAttributes:
+        - email
   UserPoolClient:
     Type: AWS::Cognito::UserPoolClient
     Properties:
